@@ -1,0 +1,42 @@
+using System;
+using System.Collections;
+public class SamplesQueue  {
+
+   public static void Main()  {
+
+      Queue myQ = new Queue();
+      myQ.Enqueue( "La" );
+      myQ.Enqueue( "primera" );
+      myQ.Enqueue( "se va a la memoria" );
+      myQ.Enqueue( "temporal" );
+
+      Console.Write( "Queue values:" );
+      PrintValues( myQ );
+
+      Console.WriteLine( "(Dequeue)\t{0}", myQ.Dequeue() );
+
+    
+      Console.Write( "Queue values:" );
+      PrintValues( myQ );
+.
+      Console.WriteLine( "(Dequeue)\t{0}", myQ.Dequeue() );
+
+      Console.Write( "Queue values:" );
+      PrintValues( myQ );
+
+      Console.WriteLine( "(Peek)   \t{0}", myQ.Peek() );
+
+     
+      Console.Write( "Queue values:" );
+      PrintValues( myQ );
+   }
+
+   public static void PrintValues( IEnumerable myCollection )  {
+      foreach ( Object obj in myCollection )
+         Console.Write( "    {0}", obj );
+      Console.WriteLine();
+      Console.Write("Presiona una tecla para continuar con el proceso. . . ");
+			Console.ReadKey(true);
+   }
+}
+	
